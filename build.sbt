@@ -1,6 +1,6 @@
 organization := "io.jmnunezizu"
 
-name := "scala-for-the-impatient"
+name := "berlin-clock"
 
 version := "0.0.1-SNAPSHOT"
 
