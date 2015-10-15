@@ -46,6 +46,19 @@ case class BerlinClock(hours: Int, minutes: Int, seconds: Int) {
 
 }
 
+object BerlinClock {
+
+  private val Separator = ":"
+
+  def unapply(s: String): Option[BerlinClock] = {
+    s.split(Separator) match {
+      case Array(hours, minutes, seconds) => Some(new BerlinClock(hours.toInt, minutes.toInt, seconds.toInt))
+      case _ => None
+    }
+  }
+
+}
+
 object Lamps {
   sealed abstract class Lamp(val id: String)
 
